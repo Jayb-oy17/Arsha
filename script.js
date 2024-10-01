@@ -72,6 +72,61 @@ const navObserver = new IntersectionObserver(
 
 navObserver.observe(headerSection);
 
+// MODAL //
+
+const modal = document.querySelector(".login-modal");
+const modalBtn = document.querySelector(".nav-btn");
+const modalCloser = document.querySelector(".close-btn");
+const togo = document.querySelector(".logged");
+const email = document.querySelector(".email");
+const pass = document.querySelector(".password");
+const passTwo = document.querySelector(".password-two");
+
+modalBtn.addEventListener("click", function () {
+    modal.style.display = ("block");
+});
+
+const closeModal = () => {
+        modal.style.display = "none";
+}
+
+modalCloser.addEventListener("click", closeModal);
+
+window.addEventListener("click", function (e) {
+    if(e.target == modal){
+        modal.style.display = "none";
+    }
+});
+
+togo.addEventListener("click", function () {
+    if (!email.value || !pass.value || !passTwo.value ){
+        alert ("please fill the input fields")
+    return;
+    }
+    if (pass.value !== passTwo.value){
+        alert("password does not match")
+        return
+    }else{
+        alert("account created succesfully")
+    }
+    email.value = " "
+    pass.value = " " 
+    passTwo.value = " "
+    closeModal();
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // const tabs = document.querySelector('.portfolio-tab');
 // const eachTab = document.querySelectorAll('.portfolio-tab-title');

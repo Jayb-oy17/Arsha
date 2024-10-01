@@ -869,3 +869,99 @@
 .copy span{
     color: #44A3D5;
 }
+
+/* MODAL  */
+
+.login-modal{
+    display: none;
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+}
+
+.modal-content{
+    background-color: whitesmoke;
+    margin: 10% auto;
+    padding: 2rem;
+    width: 80%;
+    border-radius: 5px;
+    animation-name: modalopen;
+    animation-duration: 2s;
+}
+
+.close-btn{
+    color: lightslategrey;
+    float: right;
+    font-size: 3rem;
+    transition: 0.3s;
+}
+
+.close-btn:hover{
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.mod-header{
+    text-align: center;
+    font-size: 3rem;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.email{
+    width: 100%;
+    padding: 1rem;
+    margin: 2rem auto;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #44A3D5;
+}
+.password{
+    width: 100%;
+    padding: 1rem;
+    margin: 2rem auto;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #44A3D5;
+}
+.password-two{
+    width: 100%;
+    padding: 1rem;
+    margin: 2rem auto;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #44A3D5;
+}
+
+.signup{
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    background-color: #37517E;
+    color: white;
+    font-size: 18px;
+    margin: auto;
+    border: none;
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+.modal-text{
+    text-align: center;
+    font-size: 15px;
+    margin-top: 2rem;
+}
+
+.modal-text span{
+    color: #44A3D5;
+}
+
+@keyframes modalopen{
+    from{opacity: 0;}
+    to{opacity: 1;}
+}
